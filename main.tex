@@ -1,0 +1,77 @@
+\documentclass[fancyheaders,chapterformata]{thesis}
+
+\usepackage{apalike}
+\usepackage{times}
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{array}
+\usepackage{url}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{subfigure} 
+\usepackage{color}
+
+
+\newcommand{\argmin}{\arg \min}
+\newcommand{\argmax}{\arg \max}
+\newcommand{\deri}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\loss}{{\cal L}} \newcommand{\Real}{{\cal R}}
+\newcommand{\Zset}{{\cal Z}} 
+\newcommand{\Ybar}{\bar{Y}}
+\newcommand{\BlackBox}{\rule{1.5ex}{1.5ex}}  % end of proof
+
+
+\thesistitle{bla bla}
+\author{bla}
+\month{May}
+\year{2009}
+\degree{Doctor of Philosophy}
+\advisor{bla bla}
+
+
+
+\begin{document}
+\maketitlepages
+
+\begin{dedication}
+\input{dedication}
+\end{dedication}
+
+\begin{acknowledgments}
+\input{ack}
+\end{acknowledgments}
+
+\begin{new-abstract}
+\input{abstract}
+\end{new-abstract}
+
+%make sure we are on a new page
+\clearpage
+\tableofcontents 
+
+%List Figures and Tables and add entries to the Table of Contents.
+\lofTOC
+\lotTOC
+%Print List of Notations
+\clearpage
+\begin{introduction}
+\input{intro}
+\end{introduction}
+\input{introduction}
+\input{experiments}
+
+\begin{conclusion}
+\input{conclusion}
+\end{conclusion}
+
+\input{appendix}
+\addcontentsline{toc}{chapter}{Bibliography}
+%\nocite{*}
+\bibliographystyle{apalike}
+\bibliography{mybibfilename}
+
+
+\end{document}
