@@ -1,25 +1,28 @@
 \documentclass[fancyheaders,chapterformata]{thesis}
 
-\usepackage{apalike}
 \usepackage{times}
 \usepackage{epsfig}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{graphics}
-\usepackage{array}
-\usepackage{url}
-\usepackage{algorithm}
-\usepackage{algorithmic}
-\usepackage{subfigure} 
-\usepackage{color}
+% \usepackage{amsmath}
+% \usepackage{amssymb}
+% \usepackage{graphicx}
+% \usepackage{graphics}
+% \usepackage{array}
+% \usepackage{url}
+% \usepackage{algorithm}
+% \usepackage{algorithmic}
+% \usepackage{subfigure}
+% \usepackage{color}
 
+% biblatex
+\usepackage[style=apa,backend=biber,hyperref=false,alldates=year,doi=false,autolang=other]{biblatex}
+\DeclareLanguageMapping{american}{american-apa}
+\addbibresource{../../Pandoc/zotero.bib}
 
 \newcommand{\argmin}{\arg \min}
 \newcommand{\argmax}{\arg \max}
 \newcommand{\deri}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\loss}{{\cal L}} \newcommand{\Real}{{\cal R}}
-\newcommand{\Zset}{{\cal Z}} 
+\newcommand{\Zset}{{\cal Z}}
 \newcommand{\Ybar}{\bar{Y}}
 \newcommand{\BlackBox}{\rule{1.5ex}{1.5ex}}  % end of proof
 
@@ -41,7 +44,7 @@
 \end{dedication}
 
 \begin{acknowledgments}
-\input{ack}
+\input{acknowledgments}
 \end{acknowledgments}
 
 \begin{new-abstract}
@@ -50,7 +53,7 @@
 
 %make sure we are on a new page
 \clearpage
-\tableofcontents 
+\tableofcontents
 
 %List Figures and Tables and add entries to the Table of Contents.
 \lofTOC
@@ -58,10 +61,11 @@
 %Print List of Notations
 \clearpage
 \begin{introduction}
-\input{intro}
-\end{introduction}
 \input{introduction}
-\input{experiments}
+\end{introduction}
+
+\chapter{Paper 1}
+\input{paper1}
 
 \begin{conclusion}
 \input{conclusion}
@@ -69,9 +73,8 @@
 
 \input{appendix}
 \addcontentsline{toc}{chapter}{Bibliography}
-%\nocite{*}
-\bibliographystyle{apalike}
-\bibliography{mybibfilename}
+
+\printbibliography
 
 
 \end{document}
