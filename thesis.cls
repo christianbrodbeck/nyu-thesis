@@ -1,22 +1,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                                                                         
+%
 %  thesis.cls : A Thesis class for the Courant Institute of Mathematical Sciences,NYU
 %		       By: Marc Millstone
 %		              m3i1l4l1s5t9o2n6e5 at cims dot nyu dot edu
-%                        (sorry for the obfuscation, unfortunately due to 
+%                        (sorry for the obfuscation, unfortunately due to
 %			spam boths this is necessary, just remove the digits 314159265
 %			  from between the letters in the first part of the address which will
 %			 give you my last name at my educations location )
-%                                                                         
+%
 % Note:  Although I use pdflatex, testing has shown that this class works ok with the
 % 	       standard latex + dvips + ps2pdf run.
-% 
+%
 %
 %	Provides environments for abstract, introduction which add entries to TOC
 %	new-abstract,acknowedgements, introduction, conclusion
-%	Generate list of tables/figures and add to tOC 
+%	Generate list of tables/figures and add to tOC
 %	\lotTOC and  \lofTOC
-%	
+%
 %
 %	Provides following options
 %	option			description
@@ -41,13 +41,13 @@
 %	\advisor{}
 %
 %	And then after \begin{document}
-%	call 
+%	call
 %		\maketitlepages
 %
 %
 %	New Environments defined
 %		-- introduction
-%		-- new-abstract 
+%		-- new-abstract
 %		-- conclusion
 %		-- acknowledgments
 %		-- futurework
@@ -101,7 +101,7 @@
 \LoadClass[12pt,twoside]{report}
 
 
-%Required Packages for  graphics, math, citations, formatting, etc.  
+%Required Packages for  graphics, math, citations, formatting, etc.
 %Special packages have more specific explanations below
 
 \RequirePackage{graphicx}
@@ -111,7 +111,7 @@
 \RequirePackage{amsthm}
 \RequirePackage{fancyhdr}
 % The following allows an easier way of setting page and margin sizes.  Note
-% the asymmetric argument is important to insure that the left and right margins are 
+% the asymmetric argument is important to insure that the left and right margins are
 % not aliases for the "inner" and "outer" margins for the twoside report.
 \RequirePackage[paper=letterpaper, twoside=true, includeheadfoot = true, asymmetric, lmargin=1.6in,right=1.1in,tmargin=1.1in,bmargin=1.1in,footskip=.8in]{geometry}
 
@@ -136,7 +136,7 @@
 %-------------- CODE FOR OPTION HANDLING
 %We know process the options properly
 %FIRST HEADERS
-\ifthenelse{\boolean{fancyheadersa}}{ %  
+\ifthenelse{\boolean{fancyheadersa}}{ %
 	%WE use the first form of fancy headers
 	\pagestyle{fancy}
  	\fancyhf{}
@@ -152,8 +152,8 @@
 %		\fancyfoot[C]{\thepage}}
 	% \setlength{\topmargin}{.3in}
 	}{}
-	
-	
+
+
 %NOW CHAPTER FORMATS
 \ifthenelse{\boolean{fancychaptersa}}{ %
 	%FIRST FORMAT
@@ -169,7 +169,7 @@
 	\titlespacing*{\subsubsection}{0pt}{1em}{0em}}
 	{% Check Other format
 	\ifthenelse{\boolean{fancychaptersb}}{%
-		\titleformat{name=\chapter}[block]{\filcenter\huge\normalfont\rmfamily\scshape}{\thechapter 
+		\titleformat{name=\chapter}[block]{\filcenter\huge\normalfont\rmfamily\scshape}{\thechapter
 		\quad $\bullet$ \hspace{.5em}}{0pt}{ \filcenter }[\vspace{-20pt}\filcenter\rule{.8\textwidth}{2pt}]
 
 	%%\titleformat{\chapter}[block]{\normalfont\sffamily}{}{0pt}{}
@@ -178,7 +178,7 @@
 {}
 
 
-	
+
 %Parse Dedication page
 %Requires new environment and update to page number
 
@@ -198,10 +198,10 @@
 \renewcommand{\emptyset}{\varnothing}
 \pagestyle{plain}
 %\setlength{\topmargin}{12pt}
-\textwidth 5.8in 
+\textwidth 5.8in
 \renewcommand{\headwidth}{\textwidth}
 
-% NOTE!   textheight and topmarginn must change depending on 
+% NOTE!   textheight and topmarginn must change depending on
 %		options selected.  I MUST ADD THIS FUNCTIONALITY!
 %
 %\textheight 8.0in
@@ -210,7 +210,7 @@
 %\marginparwidth 1.2in
 %\headheight 14.5pt
 %\headsep 10pt
-%\footskip 10pt   
+%\footskip 10pt
 \linespread{1.6}   %double spaced
 \normalsize        %set to normalsize so double spacing kicks in
 
@@ -259,7 +259,7 @@
 
     \begin{center}
       \linespread{3} \normalsize {\textbf{\huge{\bfseries \@thesistitle}}}\\
-    \linespread{1.6} \normalsize 
+    \linespread{1.6} \normalsize
 	\vspace{1cm}
      by\\
       \vspace{1cm}
@@ -272,15 +272,15 @@
       {\@department}\\
       {New York University}\\
       { \@month\; \@year}\\
-    \end{center} 
-         
+    \end{center}
+
       \vspace{1cm}
       \begin{flushright}
    	\makebox[2in]{\hrulefill}\\
    	\vspace{-.1cm}
    	\parbox[t]{1.8in}{\@advisor}\\
        \end{flushright}
-       
+
        \newpage
 	\begin{center}
 	\copyright \hspace{.2cm} \@author\\
@@ -327,7 +327,7 @@
 }
 
 
-%% NOTE: original file has been modified. The present file does not 
+%% NOTE: original file has been modified. The present file does not
 %% adjusts the page numbers if the dedication is not defined
 \newenvironment{dedication}
 {\setcounter{page}{3}
@@ -368,7 +368,3 @@
 
 \newenvironment{futurework}
 {\chaptertoc{Future Work}}{}
-
-
-
-
