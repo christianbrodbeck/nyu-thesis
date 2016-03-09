@@ -244,6 +244,7 @@
 \renewcommand{\month}[1]{\gdef\@month{#1}}
 \renewcommand{\author}[1]{\gdef\@author{#1}}
 \newcommand{\degree}[1]{\gdef\@degree{#1}}
+\newcommand{\department}[1]{\gdef\@department{#1}}
 \newcommand{\advisor}[1]{\gdef\@advisor{#1}}
 
 
@@ -268,9 +269,8 @@
       { A dissertation submitted in partial fulfillment}\\
       {of the requirements for the degree of}\\
       {\@degree}\\
-       {Department of Computer Science}\\
-	%{Courant Institute of Mathematical Sciences}\\
-       {New York University}\\
+      {\@department}\\
+      {New York University}\\
       { \@month\; \@year}\\
     \end{center} 
          
