@@ -1,0 +1,14 @@
+Usage
+-----
+
+Edit main.tex and *.markdown files.
+
+To compile the thesis:
+
+  $ make pdf
+
+To create an abstract with changes:
+
+  $ ./diff-abstract $revision
+
+Where $revision indicates a git commit, default is HEAD^.
