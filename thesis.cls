@@ -81,7 +81,7 @@
 %Declare OPTIONS
 \DeclareOption{chapterformata}{\setboolean{fancychaptersa}{true}}
 \DeclareOption{chapterformatb}{\setboolean{fancychaptersb}{true}}
-\DeclareOption{fancyheader}{\setboolean{fancyheadersa}{true}}
+\DeclareOption{fancyheaders}{\setboolean{fancyheadersa}{true}}
 \DeclareOption{headb}{\setboolean{fancyheadersb}{true}}
 
 \DeclareOption{dedication}{\setboolean{dedication}{true}}
