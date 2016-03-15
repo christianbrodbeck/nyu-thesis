@@ -24,3 +24,6 @@ conclusion.tex : conclusion.markdown
 
 appendix.tex : appendix.markdown
 	pandoc appendix.markdown -o appendix.tex --biblatex
+
+clean :
+	rm *.aux *.bbl *.log *.lot *.run.xml *.tex.blg *.toc *.bcf *.blg *.lof
