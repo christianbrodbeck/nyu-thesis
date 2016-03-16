@@ -4,6 +4,9 @@ pdf : dedication.tex acknowledgments.tex abstract.tex introduction.tex paper1.te
 	biber main
 	pdflatex main.tex
 
+abstract-page : abstract.tex
+	pdflatex abstract-page.tex
+
 dedication.tex : dedication.markdown
 	pandoc dedication.markdown -o dedication.tex --biblatex
 
