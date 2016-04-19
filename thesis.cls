@@ -110,6 +110,7 @@
 \RequirePackage{amsfonts}
 \RequirePackage{amsthm}
 \RequirePackage{fancyhdr}
+\RequirePackage{setspace}  % double spacing
 % The following allows an easier way of setting page and margin sizes.  Note
 % the asymmetric argument is important to insure that the left and right margins are
 % not aliases for the "inner" and "outer" margins for the twoside report.
@@ -211,8 +212,7 @@
 %\headheight 14.5pt
 %\headsep 10pt
 %\footskip 10pt
-\linespread{1.6}   %double spaced
-\normalsize        %set to normalsize so double spacing kicks in
+\doublespacing
 
 
 \tolerance=100  %allow slightly looser typesetting for fewer
